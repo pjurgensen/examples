@@ -1,0 +1,12 @@
+<!-- /app/views/layouts/_errors.html.erb -->
+
+<% if object.errors.any? %>
+  <div class="red error_messages">
+    <h2>Invalid email or password</h2>
+    <ul>
+      <% object.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
